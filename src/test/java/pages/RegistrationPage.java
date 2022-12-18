@@ -4,7 +4,6 @@ import com.codeborne.selenide.selector.ByText;
 import pages.components.CalendarComponent;
 import pages.components.RegistrationResultModal;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -68,7 +67,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage uploadPhoto(String photoName) {
-        $("#uploadPicture").uploadFromClasspath("photo_2021-10-13 21.24.16.jpeg");
+        $("#uploadPicture").uploadFromClasspath(photoName);
 
         return this;
     }
